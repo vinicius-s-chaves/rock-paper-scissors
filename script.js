@@ -30,30 +30,46 @@ function playRound(humanChoice, computerChoice) {
         return 'Draw! Both made the same play!'
 
     } else if (humanChoice === 'ROCK' && computerChoice === 'PAPER') {
-        return 'You lose! Paper beats rock!'
         computerScore++
+        return 'You lose! Paper beats rock!'
 
     } else if (humanChoice === 'ROCK' && computerChoice === 'SCISSORS') {
-        return 'You win! Rock beats scissors!'
         humanScore++
+        return 'You win! Rock beats scissors!'
 
     } else if (humanChoice === 'PAPER' && computerChoice === 'ROCK') {
-        return 'You win! Paper beats rock!'
         humanScore++
+        return 'You win! Paper beats rock!'
 
     } else if (humanChoice === 'PAPER' && computerChoice === 'SCISSORS') {
-        return 'You lose! Scissors beats paper!'
         computerScore++
+        return 'You lose! Scissors beats paper!'
 
     } else if (humanChoice === 'SCISSORS' && computerChoice === 'ROCK') {
-        return 'You lose! Rock beats scissors!'
         computerScore++
+        return 'You lose! Rock beats scissors!'
 
     } else if (humanChoice === 'SCISSORS' && computerChoice === 'PAPER') {
-        return 'You win! Scissors beats paper!'
         humanScore++
+        return 'You win! Scissors beats paper!'
 
     }
 
 }
-alert(playRound())
+
+function playGame() {
+    alert('This is the classic rock paper scissors game! You\'ll play 5 rounds against the machine')
+    for (let i = 1; i <= 5; i++) {
+        alert(playRound())
+
+    }
+
+    if (humanScore > computerScore) {
+        alert('You win!!! \n' + humanScore + 'x' + computerScore)
+
+    } else {
+        alert('You lose!!! \n' + computerScore + 'x' + humanScore)
+    }
+}
+
+playGame()
