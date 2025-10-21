@@ -1,5 +1,5 @@
 function getHumanChoice(humanMove) {
-    let moveChoice = prompt('What\'s your move? \nRock (r), Paper (p) or Scissors (s)?')
+    let moveChoice = prompt('What\'s your move? \nRock (rock), Paper (paper) or Scissors (scissors)?')
     return moveChoice
 }
 
