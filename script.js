@@ -5,7 +5,6 @@ function getHumanChoice(humanChoice) {
     let choice = prompt('What\'s your move? \nRock (rock), Paper (paper) or Scissors (scissors)?')
     return choice
 }
-console.log(getHumanChoice())
 
 function getComputerChoice(computerChoice) {
     let choice = (Math.random().toFixed(3)) * 100
@@ -21,4 +20,34 @@ function getComputerChoice(computerChoice) {
 
     }
 }
-console.log(getComputerChoice())
+
+function playRound(humanChoice, computerChoice) {
+    humanChoice = getHumanChoice().toUpperCase()
+    computerChoice = getComputerChoice().toUpperCase()
+    console.log(humanChoice, computerChoice)
+    
+    if (humanChoice === computerChoice) {
+        return 'Draw! Both made the same play!'
+
+    } else if (humanChoice === 'ROCK' && computerChoice === 'PAPER') {
+        return 'You lose! Paper beats rock!'
+
+    } else if (humanChoice === 'ROCK' && computerChoice === 'SCISSORS') {
+        return 'You win! Rock beats scissors!'
+
+    } else if (humanChoice === 'PAPER' && computerChoice === 'ROCK') {
+        return 'You win! Paper beats rock!'
+
+    } else if (humanChoice === 'PAPER' && computerChoice === 'SCISSORS') {
+        return 'You lose! Scissors beats paper!'
+
+    } else if (humanChoice === 'SCISSORS' && computerChoice === 'ROCK') {
+        return 'You lose! Rock beats scissors!'
+
+    } else if (humanChoice === 'SCISSORS' && computerChoice === 'PAPER') {
+        return 'You win! Scissors beats paper!'
+
+    }
+
+}
+alert(playRound())
