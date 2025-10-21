@@ -1,19 +1,19 @@
 let humanScore = 0
 let computerScore = 0
 
-function getHumanChoice(humanMove) {
-    let moveChoice = prompt('What\'s your move? \nRock (rock), Paper (paper) or Scissors (scissors)?')
-    return moveChoice
+function getHumanChoice(humanChoice) {
+    let choice = prompt('What\'s your move? \nRock (rock), Paper (paper) or Scissors (scissors)?')
+    return choice
 }
+console.log(getHumanChoice())
 
+function getComputerChoice(computerChoice) {
+    let choice = (Math.random().toFixed(3)) * 100
 
-function getComputerChoice(computerMove) {
-    let randomChoice = (Math.random().toFixed(3)) * 100
-
-    if (randomChoice <= 33.3) {
+    if (choice <= 33.3) {
         return 'rock'
 
-    } else if (randomChoice > 33.3 && randomChoice <= 66.6) {
+    } else if (choice > 33.3 && choice <= 66.6) {
         return 'paper'
 
     } else {
@@ -21,4 +21,4 @@ function getComputerChoice(computerMove) {
 
     }
 }
-
+console.log(getComputerChoice())
