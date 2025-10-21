@@ -1,3 +1,6 @@
+let humanScore = 0
+let computerScore = 0
+
 function getHumanChoice(humanMove) {
     let moveChoice = prompt('What\'s your move? \nRock (rock), Paper (paper) or Scissors (scissors)?')
     return moveChoice
