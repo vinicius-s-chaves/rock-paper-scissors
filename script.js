@@ -7,7 +7,7 @@ function getHumanChoice(humanMove) {
 }
 
 
-let getComputerChoice = function(computerMove) {
+function getComputerChoice(computerMove) {
     let randomChoice = (Math.random().toFixed(3)) * 100
 
     if (randomChoice <= 33.3) {
@@ -21,4 +21,4 @@ let getComputerChoice = function(computerMove) {
 
     }
 }
-getComputerChoice()
+
