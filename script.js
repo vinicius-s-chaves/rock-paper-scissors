@@ -31,21 +31,27 @@ function playRound(humanChoice, computerChoice) {
 
     } else if (humanChoice === 'ROCK' && computerChoice === 'PAPER') {
         return 'You lose! Paper beats rock!'
+        computerScore++
 
     } else if (humanChoice === 'ROCK' && computerChoice === 'SCISSORS') {
         return 'You win! Rock beats scissors!'
+        humanScore++
 
     } else if (humanChoice === 'PAPER' && computerChoice === 'ROCK') {
         return 'You win! Paper beats rock!'
+        humanScore++
 
     } else if (humanChoice === 'PAPER' && computerChoice === 'SCISSORS') {
         return 'You lose! Scissors beats paper!'
+        computerScore++
 
     } else if (humanChoice === 'SCISSORS' && computerChoice === 'ROCK') {
         return 'You lose! Rock beats scissors!'
+        computerScore++
 
     } else if (humanChoice === 'SCISSORS' && computerChoice === 'PAPER') {
         return 'You win! Scissors beats paper!'
+        humanScore++
 
     }
 
