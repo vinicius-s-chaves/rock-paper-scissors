@@ -65,10 +65,10 @@ function playGame() {
     }
 
     if (humanScore > computerScore) {
-        alert('You win!!! \n' + humanScore + 'x' + computerScore)
+        alert('You win!!! \nYou ' + humanScore + 'x' + computerScore + ' Computer')
 
     } else {
-        alert('You lose!!! \n' + computerScore + 'x' + humanScore)
+        alert('You lose!!! \nComputer ' + computerScore + 'x' + humanScore + ' You')
     }
 }
 
